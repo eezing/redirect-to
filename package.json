@@ -1,0 +1,23 @@
+{
+  "name": "redirect-to",
+  "version": "1.0.0",
+  "description": "A micro service to redirect all GET requests to target URL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eezing/redirect-to.git"
+  },
+  "keywords": [],
+  "author": "Eric Zingeler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eezing/redirect-to/issues"
+  },
+  "homepage": "https://github.com/eezing/redirect-to#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
