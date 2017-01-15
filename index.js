@@ -1,7 +1,6 @@
 'uset strict';
 
 const http = require('http');
-const url = require('url');
 
 const redirectUrl = process.env.REDIRECT_URL;
 const port = process.env.PORT || 3000;
@@ -16,11 +15,7 @@ if (Number(httpCode) < 300 || Number(httpCode) > 308) {
 }
 
 const server = http.createServer((req, res) => {
-
-    const parsedUrl = url.parse(req.url);
-
-    res.writeHead(httpCode, {'Location': `${redirectUrl}${parsedUrl.path}`});
-
+    res.writeHead(httpCode, {'Location': redirectUrl + req.url });
     res.end();
 });
 
